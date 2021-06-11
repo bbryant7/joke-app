@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import './styles/App.css';
+import mushroom from './images/happy_mushroom.png'
 
 function App() {
   const [answer, displayAnswer] = useState(false);
@@ -10,6 +11,7 @@ function App() {
       <h1> Why did the mushroom go to the party?</h1>
       {button}
       {answerText}
+      <img src={mushroom}/>
     </div>
   );
 }
