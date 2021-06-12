@@ -17,9 +17,12 @@ jobs:
     executor: heroku/default
     steps:
       - checkout
-      - run:
-          name: Install Heroku
-          command: heroku/install
-      - run:
-          name: Deploy
-          command: heroku/deploy-via-git
+      - heroku/install
+      - heroku/deploy-via-git
+workflows:
+  build_and_test:
+    jobs:
+      - build
+  heroku_deploy:
+    jobs:
+      - deploy
