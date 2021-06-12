@@ -18,12 +18,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Heroku
-        command: heroku/install
+          name: Install Heroku
+          command: heroku/install
       - run:
-        name: Deploy
-        command: heroku/deploy-via-git
-# workflows:
-#   heroku_deploy:
-#     jobs:
-#       - deploy
+          name: Deploy
+          command: heroku/deploy-via-git
