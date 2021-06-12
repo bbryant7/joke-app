@@ -1,25 +1,25 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@1.2.6
-# jobs:
-#   build:
-#     docker:
-#       - image: circleci/node:14.4.0
-#     steps:
-#       - checkout
-#       - run:
-#           name: Install Dependencies
-#           command: yarn install
-#       - run:
-#           name: Test
-#           command: yarn test
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14.4.0
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - run:
+          name: Test
+          command: yarn test
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git
 workflows:
   heroku_deploy:
     jobs:
-      - build
-      - heroku/deploy-via-git:
-          requires:
-             - build
-           filters:
-             branches:
-               only: main
+      - deploy
