@@ -18,10 +18,10 @@ describe('renders page', () => {
 describe('click event', () => {
   it('calls onClick, reveals answer', () => {
     render(<App />);
-    expect(/He was a fungi!/).not.toBeInTheDocument;
+    expect(/He was a fungi!!/).not.toBeInTheDocument;
     const button = screen.getByText(/Tell Me!/i);
     fireEvent.click(button);
-    const answer = screen.getByText(/He was a fungi!/i)
+    const answer = screen.getByText(/He was a fungi!!/i)
     expect(answer).toBeInTheDocument;
   });
 })
