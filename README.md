@@ -1,7 +1,6 @@
 # Sample Button Click Application
 Use CircleCI to build, test and deploy a simple application\
-![application screenshot](public/final.png "final UI")\
-[Visit App](https://joke-button-app.herokuapp.com/)\
+[Visit App](https://joke-button-app.herokuapp.com/)
 
 ## Set up
 1. clone repo
