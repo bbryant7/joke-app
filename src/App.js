@@ -4,7 +4,7 @@ import mushroom from './images/happy_mushroom.png'
 
 function App() {
   const [answer, displayAnswer] = useState(false);
-  let answerText = answer ? <h2>He was a fungi!!</h2> : ""
+  let answerText = answer ? <h2>He was a fungi!</h2> : ""
   let button = answer ? "" : <button onClick={() => displayAnswer(true)}>Tell Me!</button>
   return (
     <div className="App">

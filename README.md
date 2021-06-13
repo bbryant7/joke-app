@@ -1,5 +1,7 @@
 # Sample Button Click Application
-Intented to incorporate CircleCi
+Use CircleCI to build, test and deploy a simple application
+[Visit App](https://joke-button-app.herokuapp.com/)
+![application screenshot](public/final.png "final UI")
 
 ## Set up
 1. clone repo
@@ -8,9 +10,9 @@ Intented to incorporate CircleCi
 4. Will run locally at port 8080
 
 ## Testing
-
 ```
 yarn test
 ```
 
 ## Deploy
+Deploys automatically from main via circleCI
