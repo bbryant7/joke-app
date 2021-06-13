@@ -13,7 +13,6 @@ jobs:
       - run:
           name: Test
           command: yarn test
-      - checkout
       - heroku/install
       - heroku/deploy-via-git
 workflows:
